@@ -32,3 +32,4 @@
 /config/storage.yml
 /config/credentials.yml.enc
 /test/*
+/.env
