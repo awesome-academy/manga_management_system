@@ -7,4 +7,8 @@ class Manga < ApplicationRecord
   has_many :chapters
   has_many :composes
   belongs_to :category
+
+  scope :desc, -> {
+    order updated_at: :desc
+  }
 end

@@ -67,7 +67,7 @@ input[type="submit"],.agileinfo_chat a,.w3ls_footer_grid1_left p a,.w3l_sign_in_
 .w3_search{
 	float: left;
     width: 40%;
-    margin-left: 9em;
+    margin-left: 6em;
 	margin-top: .7em;
 }
 .w3_search input[type="text"]{
@@ -123,7 +123,7 @@ input[type="submit"],.agileinfo_chat a,.w3ls_footer_grid1_left p a,.w3l_sign_in_
 	font-size:1em;
 }
 .w3l_sign_in_register ul li i,.w3l_sign_in_register ul li:first-child{
-	padding-right:1em;
+	padding-right:0em;
 }
 /*-- //header --*/
 /*-- nav --*/

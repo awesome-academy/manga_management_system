@@ -1,2 +1,4 @@
 users:
   page: 10
+categories:
+  page: 5
