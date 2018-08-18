@@ -1,5 +1,9 @@
 class MangasController < ApplicationController
-  before_action :get_manga
+  before_action :get_manga, only: [:show]
+
+  def index
+    @mangas = Manga.desc.all
+  end
 
   def show
   end

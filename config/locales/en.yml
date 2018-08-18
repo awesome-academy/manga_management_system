@@ -54,14 +54,32 @@ en:
   signin: "Sign In"
   categories: "Categories"
   all_categories: "Show All Categories"
+  all_mangas: "Mangas"
   home: "Home Page"
   admin:
+    categories:
+      index:
+        name: "Name"
+        count: "Count"
+        create_category: "Create category"
+        all_categories: "All categories"
+      edit:
+        update_category: "Update category"
+        update_category: "Update category"
+      _form:
+        category_title: "Category title"
+      _category:
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
     users:
       index:
         export_csv: "Export CSV"
         change: "Change"
         import_csv: "Import CSV"
   mangas:
+    index:
+      mangas: "All Mangas"
     show:
       status: "Status"
       category: "Category"

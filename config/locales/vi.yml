@@ -53,4 +53,23 @@ vi:
   signin: "Sign In"
   categories: ""
   all_categories: ""
+  all_mangas: ""
   home: ""
+  admin:
+    users:
+      index:
+        export_csv: "Export CSV"
+        change: "Change"
+        import_csv: "Import CSV"
+  mangas:
+    index:
+      mangas: "All Mangas"
+    show:
+      status: "Status"
+      category: "Category"
+      view: "Number of Views"
+      rate: "Rating"
+      detail: "Detail"
+      list_chapters: "Chapters List"
+      num_chapters: "Chapters"
+      last_updated: "Last Updated"
