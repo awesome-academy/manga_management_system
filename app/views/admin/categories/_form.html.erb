@@ -1,0 +1,9 @@
+<%= form_for [:admin,@category] do |f| %>
+  <div class="clock-section">
+    <h3><%= t(".category_title") %></h3>
+    <%= f.text_field :name,class: "form-control", place: "Enter category title" %>
+  </div>
+  <div class="block-section">
+    <%= f.submit yield(:btn_title), class: "btn tbn-submit" %>
+  </div>
+<% end %>

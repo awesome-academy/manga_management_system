@@ -1,0 +1,28 @@
+<% provide :title, t(".all_categories") %>
+<% provide :btn_title, t(".create_category") %>
+<div class="page-content container-fluid">
+  <div class="page-content-item">
+    <div class="row">
+      <div class="col-md-4">
+        <%= render "form" %>
+      </div>
+      <div class="col-md-8">
+        <div class="block-section">
+          <table class="table cat-table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col"><%= t".name" %></th>
+                <th scope="col"><%= t".count" %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render partial: "category", collection: @categories %>
+            </tbody>
+          </table>
+          <%= will_paginate @categories %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

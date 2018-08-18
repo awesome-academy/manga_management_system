@@ -1,0 +1,18 @@
+<tr>
+  <td class="title-table">
+    <span><%= category.name %></span>
+  </td>
+  <td>
+    <ul class="cat-action">
+      <li>
+        <%= link_to t(".edit"), edit_admin_category_path(category.id) %>
+      </li>
+      <li>
+        <%= link_to t(".delete"), admin_category_path(category.id), method: :delete, data:{confirm: t(".confirm")} %>
+      </li>
+    </ul>
+  </td>
+  <td>
+    <%= category.mangas.all.size %>
+  </td>
+</tr>
