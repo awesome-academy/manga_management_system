@@ -3,6 +3,9 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_locale
   before_action :get_categories
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_path, :alert => exception.message
+  end
 
   private
   def get_categories

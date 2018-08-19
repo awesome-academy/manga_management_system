@@ -15,7 +15,7 @@ class User < ApplicationRecord
   has_many :comments
   has_many :likes
 
-  scope :load_data, -> {select(:id, :avatars, :name, :email, :role)}
+  scope :load_data, -> {select(:id, :name, :email, :role)}
 
   validates_presence_of :name
 
