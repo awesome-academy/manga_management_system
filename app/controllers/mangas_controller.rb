@@ -6,6 +6,7 @@ class MangasController < ApplicationController
   end
 
   def show
+    @chapters = @manga.chapters.all
   end
 
   private

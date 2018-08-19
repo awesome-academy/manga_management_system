@@ -73,4 +73,7 @@ jp:
       list_chapters: "Chapters List"
       num_chapters: "Chapters"
       last_updated: "Last Updated"
-
+  chapters:
+    show:
+      updated_at: "Last updated"
+      info: "info: "Use left arrow (←) or right arrow (→) to change chapter"

@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2018_08_09_054826) do
 
   create_table "chapters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "manga_id"
+    t.string "name"
     t.text "images"
     t.text "content"
     t.datetime "created_at", null: false

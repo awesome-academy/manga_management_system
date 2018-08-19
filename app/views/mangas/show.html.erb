@@ -5,6 +5,7 @@
       <article id="item-detail">
         <h1 class="title-detail"><%= @manga.name %></h1>
         <time class="small">
+          <%= t(".last_updated") %> : <%= @manga.updated_at.strftime("%d-%m-%Y") %>
         </time>
         <div class="detail-info">
           <div class="row">
@@ -79,9 +80,9 @@
               </li>
               <li class="row">
                 <div class="col-xs-5 chapter">
-                  <a href="http://www.nettruyen.com/truyen-tranh/hard-core-leveling-warrior/chap-39/400905">Chapter 39</a>
+                  <%= render partial: "chapter", collection: @chapters %>
                 </div>
-                <div class="col-xs-4 text-center small">36 phút trước</div>
+                <div class="col-xs-4 text-center small"></div>
               </li>
             </ul>
           </nav>

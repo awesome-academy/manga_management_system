@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="reading">
+    <div class="container">
+      <div class="top">
+        <ul class='breadcrumb'>
+          <li itemscope itemtype='http://data-vocabulary.org/Breadcrumb'>
+            <span itemprop='title'>
+              <%= link_to t("home"), root_path %>
+            </span>
+          </li>
+          <li itemscope itemtype='http://data-vocabulary.org/Breadcrumb'>
+            <span itemprop='title'>
+              <%= link_to @chapter.category.name, category_path(@chapter.category) %>
+            </span>
+          </li>
+          <li itemscope itemtype='http://data-vocabulary.org/Breadcrumb'>
+            <span itemprop='title'>
+              <%= link_to @chapter.manga.name, manga_path(@chapter.manga) %>
+            </span>
+          </li>
+          <li itemscope itemtype='http://data-vocabulary.org/Breadcrumb'>
+            <span itemprop='title'>
+              <%= link_to @chapter.name, @chapter %>
+            </span>
+          </li>
+        </ul>
+        <h1 class='txt-primary'><%= link_to @chapter.manga.name, manga_path(@chapter.manga) %> <span>- <%= @chapter.name %></span></h1><i><%= t(".updated_at") %> : <%= @chapter.updated_at.strftime("%d-%m-%Y") %></i>
+      </div>
+      <div class="reading-control">
+        <span class='chapter-id hidden' data-id='401282'></span>
+        <div class="mrb10">
+          <%=  %>
+        </div>
+        <div class="alert alert-info mrb10 hidden-xs hidden-sm">
+          <i class="fa fa-info-circle"></i> <em><%= t(".info") %></em>
+        </div>
+        <div class="chapter-nav">
+          <a class="home" href="<% root_path %>" title="<%= t("home") %>"><i class="fa fa-home"></i></a>
+          <select class="select-chapter">
+            <% chapters_array = @chapters.map { |chapter| [chapter.name] } %>
+            <%= options_for_select(chapters_array) %>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="reading-detail box_doc">
+      <% if @chapter.images.present? %>
+        <div id='page_4' class='page-chapter'><img src=""></div>
+      <% else %>
+        <div id='page_4' class='page-chapter'><%= @chapter.content %></div>
+      <% end %>
+    </div>
+  </div>
+</div>
