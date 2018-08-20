@@ -45,10 +45,16 @@
     </div>
     <div class="reading-detail box_doc">
       <% if @chapter.images.present? %>
-        <div id='page_4' class='page-chapter'><img src=""></div>
+      <div id='page_4' class='page-chapter'><img src=""></div>
       <% else %>
-        <div id='page_4' class='page-chapter'><%= @chapter.content %></div>
+      <div id='page_4' class='page-chapter'><%= @chapter.content %></div>
       <% end %>
+    </div>
+    <div id="comments-list">
+      <%= render partial: @chapter.comments.load_order %>
+    </div>
+    <div id="comment-form">
+      <%= render 'comments/comment_form' %>
     </div>
   </div>
 </div>

@@ -3,6 +3,8 @@ class ChaptersController < ApplicationController
 
   def show
     @chapters = @chapter.manga.chapters.all
+    @comments = @chapter.comments.hash_tree
+    @comment = @chapter.comments.new
   end
 
   private

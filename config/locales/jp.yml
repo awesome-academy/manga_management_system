@@ -56,6 +56,10 @@ jp:
   all_categories: ""
   all_mangas: "Mangas"
   home: ""
+  comment_created: "Comment created"
+  comment_deleted: "Comment deleted"
+  reply: "Reply"
+  delete_comment: "Delete comment"
   admin:
     categories:
       index:

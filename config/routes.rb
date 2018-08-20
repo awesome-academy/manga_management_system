@@ -7,7 +7,11 @@ Rails.application.routes.draw do
     resources :users, only: [:show]
     resources :categories
     resources :mangas
-    resources :chapters
+    resources :chapters do
+      resources :comments, except: [:show, :edit]
+    end
+    get "/chapters/(:chapter_id)/comments/new/(:parent_id)", to: "comments#new", as: :new_comment
+    resources :comments, except: [:show, :edit]
     resources :authors
     namespace :admin do
       root "admin#index",as: :root

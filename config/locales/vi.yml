@@ -56,6 +56,10 @@ vi:
   all_categories: "Tất cả thể loại"
   all_mangas: "Truyện"
   home: "Trang chủ"
+  comment_created: "Đã tạo bình luận"
+  comment_deleted: "Đã xóa bình luận"
+  reply: "Trả lời"
+  delete_comment: "Xóa bình luận"
   admin:
     categories:
       index:

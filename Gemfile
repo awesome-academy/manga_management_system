@@ -34,6 +34,7 @@ gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "will_paginate"
+gem "closure_tree"
 if Gem.win_platform?
   gem "wdm", ">= 0.1.0"
 end

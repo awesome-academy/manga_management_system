@@ -2,3 +2,5 @@ users:
   page: 10
 categories:
   page: 5
+comments:
+  rows: 5

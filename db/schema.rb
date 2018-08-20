@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_09_054826) do
+ActiveRecord::Schema.define(version: 2018_08_23_084928) do
 
   create_table "animes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -44,14 +44,22 @@ ActiveRecord::Schema.define(version: 2018_08_09_054826) do
     t.index ["manga_id"], name: "index_chapters_on_manga_id"
   end
 
+  create_table "comment_hierarchies", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "ancestor_id", null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations", null: false
+    t.index ["ancestor_id", "descendant_id", "generations"], name: "comment_anc_desc_udx", unique: true
+    t.index ["descendant_id"], name: "comment_desc_idx"
+  end
+
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "manga_id"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["manga_id"], name: "index_comments_on_manga_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
+    t.integer "parent_id"
+    t.bigint "chapter_id"
+    t.string "author"
+    t.index ["chapter_id"], name: "index_comments_on_chapter_id"
   end
 
   create_table "composes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

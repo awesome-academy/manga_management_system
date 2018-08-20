@@ -56,6 +56,10 @@ en:
   all_categories: "Show All Categories"
   all_mangas: "Mangas"
   home: "Home Page"
+  comment_created: "Comment created"
+  comment_deleted: "Comment deleted"
+  reply: "Reply"
+  delete_comment: "Delete comment"
   admin:
     categories:
       index:
