@@ -6,6 +6,7 @@ class Manga < ApplicationRecord
   has_many :follows
   has_many :chapters
   has_many :composes
+  has_many :authors, through: :composes
   belongs_to :category
 
   scope :desc, -> {

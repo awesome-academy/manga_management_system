@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="row">
+    <div class="center-side col-md-12">
+      <ul class='breadcrumb'><li itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><span itemprop='title'><%= link_to t("home"), root_path %></span></li><li itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><span itemprop='title'><%= link_to t(".authors"), authors_path %></span></li><li itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><span itemprop='title'><%= link_to @author.name, @author %></span></li></ul>
+      <%= render partial: "shared/manga", collection: @mangas %>
+    </div>
+  </div>
+</div>

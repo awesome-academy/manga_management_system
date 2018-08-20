@@ -42,6 +42,7 @@ jp:
         anime: "Anime"
         profile: ""
         logout: ""
+        account: "Account"
     footer:
       coryright: "2018 Manga Anime. All rights reserved | Design by Killua"
   update: "Update"
@@ -56,6 +57,21 @@ jp:
   all_mangas: "Mangas"
   home: ""
   admin:
+    categories:
+      index:
+        name: "Name"
+        count: "Count"
+        create_category: "Create category"
+        all_categories: "All categories"
+      edit:
+        update_category: "Update category"
+        update_category: "Update category"
+      _form:
+        category_title: "Category title"
+      _category:
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
     users:
       index:
         export_csv: "Export CSV"
@@ -65,6 +81,7 @@ jp:
     index:
       mangas: "All Mangas"
     show:
+      author: "Author"
       status: "Status"
       category: "Category"
       view: "Number of Views"
@@ -73,7 +90,11 @@ jp:
       list_chapters: "Chapters List"
       num_chapters: "Chapters"
       last_updated: "Last Updated"
+      updating: "Updating"
   chapters:
     show:
       updated_at: "Last updated"
-      info: "info: "Use left arrow (←) or right arrow (→) to change chapter"
+      info: "Use left arrow (←) or right arrow (→) to change chapter"
+  authors:
+    show:
+      author: "Author"

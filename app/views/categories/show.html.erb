@@ -1,2 +1,8 @@
-<h2><%= @category.name %></h2>
-  <%= render partial: "shared/manga", collection: @mangas %>
+<div class="container">
+  <div class="row">
+    <div class="center-side col-md-12">
+      <ul class='breadcrumb'><li itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><span itemprop='title'><%= link_to t("home"), root_path %></span></li><li itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><span itemprop='title'><%= link_to t("categories"), categories_path %></span></li><li itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><span itemprop='title'><%= link_to @category.name, @category %></span></li></ul>
+      <%= render partial: "shared/manga", collection: @mangas %>
+    </div>
+  </div>
+</div>

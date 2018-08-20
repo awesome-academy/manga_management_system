@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :mangas
     resources :chapters
+    resources :authors
     namespace :admin do
       root "admin#index",as: :root
       resources :users do

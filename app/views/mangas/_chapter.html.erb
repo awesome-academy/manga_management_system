@@ -1,5 +1,8 @@
 <ul>
-  <li>
-    <%= link_to chapter.name, chapter_path(chapter) %>
+  <li class="row">
+    <div class="col-xs-5 chapter">
+      <%= link_to chapter.name, chapter_path(chapter) %>
+    </div>
+    <div class="col-xs-4 text-center small"><%= chapter.updated_at.strftime("%d-%m-%Y") %></div>
   </li>
 </ul>

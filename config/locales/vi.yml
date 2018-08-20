@@ -40,8 +40,9 @@ vi:
         signin: "Đăng nhập"
         mag: "Mag"
         anime: "Anime"
-        profile: "Tài khoản"
+        profile: "Thông tin cá nhân"
         logout: "Đăng xuất"
+        account: "Tài khoản"
     footer:
         coryright: "2018 Manga Anime. All rights reserved | Design by Killua"
   update: "Cập nhật"
@@ -56,15 +57,31 @@ vi:
   all_mangas: "Truyện"
   home: "Trang chủ"
   admin:
+    categories:
+      index:
+        name: "Name"
+        count: "Count"
+        create_category: "Create category"
+        all_categories: "All categories"
+      edit:
+        update_category: "Update category"
+        update_category: "Update category"
+      _form:
+        category_title: "Category title"
+      _category:
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
     users:
       index:
-        export_csv: "Xuất CSV"
-        change: "Thay đổi"
-        import_csv: "Nhập CSV"
+        export_csv: "Export CSV"
+        change: "Change"
+        import_csv: "Import CSV"
   mangas:
     index:
       mangas: "Tất cả truyện"
     show:
+      author: "Tác gỉa"
       status: "Tình trạng"
       category: "Thể loại"
       view: "Số lượt xem"
@@ -73,7 +90,11 @@ vi:
       list_chapters: "Danh sách chương"
       num_chapters: "Số chương"
       last_updated: "Cập nhật lần cuối"
+      updating: "Updating"
   chapters:
     show:
       updated_at: "Cập nhật lần cuối"
       info: "Dùng mũi tên trái (←) hoặc phải (→) để chuyển chapter"
+  authors:
+    show:
+      author: "Author"
