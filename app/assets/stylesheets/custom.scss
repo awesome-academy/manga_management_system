@@ -1,4 +1,14 @@
 .resize-img{
-    width:25px;
-    height: 25px;
+  width:25px;
+  height: 25px;
+}
+.rate_title {
+  margin: 0 0 20px 0;
+}
+.rates {
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(204, 77, 77);
+  .star-rating {
+    padding-bottom: 8px;
+  }
 }

@@ -9,6 +9,13 @@ class MangasController < ApplicationController
     @chapters = @manga.chapters.all
     @authors = @manga.authors.all
     @categories = @manga.categories.all
+    @rates = Rate.rate_manga(@manga.id)
+
+    if @rates.blank?
+      @avg_rate = 0
+    else
+      @avg_rate = @rates.average(:rating).round(Settings.mangas.round)
+    end
   end
 
   private

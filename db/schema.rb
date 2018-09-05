@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 2018_08_27_034306) do
 
   create_table "chapters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "manga_id"
-    t.string "name"
     t.text "images"
     t.text "content"
     t.datetime "created_at", null: false
@@ -110,7 +109,7 @@ ActiveRecord::Schema.define(version: 2018_08_27_034306) do
   create_table "rates", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "manga_id"
-    t.integer "number_of_rates"
+    t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["manga_id"], name: "index_rates_on_manga_id"

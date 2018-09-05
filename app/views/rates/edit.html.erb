@@ -1,0 +1,12 @@
+<h1><% t("Edit Rating") %></h1>
+
+<h2>Your rating</h2>
+<% current_user.rates.each do |rate| %>
+  <div class="rates">
+    <div class="star-rating" data-score=<%= rate.rating %>></div>
+  </div>
+<% end %>
+<h2>Change rate</h2>
+<%= render 'form_rate' %>
+<h2>Or back</h2>
+<%= link_to 'Back', manga_path(@manga) %>

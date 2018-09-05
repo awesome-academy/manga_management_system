@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       member do
         get :followers
       end
+      resources :rates, except: [:show, :index]
     end
     resources :chapters
     resources :authors

@@ -22,6 +22,23 @@
 //= require owl.carousel
 //= require magnific-popup
 //= require custom
+//= require jquery.raty
 //= require ckeditor/init
 //= require activestorage
 //= require turbolinks
+
+
+$(document).on("turbolinks:load", function() {
+  $('#star-rating').raty({
+    path: '/assets/',
+    scoreName: 'rate[rating]'
+  });
+
+  $('.star-rating').raty({
+    path: '/assets/',
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    }
+  });
+  });

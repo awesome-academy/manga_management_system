@@ -68,6 +68,17 @@
                   <% end %>
                 </div>
                 <% end %>
+                <% @rating = current_user.rates.find_by(manga_id: @manga.id) %>
+                  <% unless @rating %>
+                    <%= link_to "ass",new_manga_rate_path(@manga), class: "btn btn-success" %>
+                  <% else %>
+                    <%= link_to "asss",edit_manga_rate_path(@manga, @rating), class: "btn btn-success" %>
+                  <% end %>
+                <div class="star-rating" data-score= <%= @avg_rate %> ></div>
+                <em><%= "#{@rates.length} rates" %></em>
+                <span>
+                  <b>1.887</b> Người Đã Theo Dõi
+                </span>
               </div>
                 <% if @chapters.present? %>
                   <div class="read-action mrt10">
