@@ -2,7 +2,7 @@ class AuthorsController < ApplicationController
   before_action :get_author, only: [:show]
 
   def show
-    @mangas = @author.mangas.all
+    @mangas = @author.mangas.order(:name)
   end
 
   private

@@ -43,6 +43,7 @@ en:
       profile: "Profile"
       logout: "Log Out"
       account: "Account"
+      search: "Search manga..."
     footer:
       coryright: "2018 Manga Anime. All rights reserved | Design by Killua"
   update: "Update"
@@ -56,6 +57,15 @@ en:
   all_categories: "Show All Categories"
   all_mangas: "Mangas"
   home: "Home Page"
+  feature_manga: "Featured Mangas"
+  featured: "Featured"
+  most_view: "Most Viewed"
+  top_rate: "Top Rated"
+  recent_add: "Recently Added"
+  popular: "Most Popular Mangas"
+  detail: "Detail"
+  release_time: "Release Time"
+  category: "Category"
   admin:
     categories:
       index:
@@ -109,3 +119,6 @@ en:
   authors:
     show:
       author: "Author"
+  time:
+    formats:
+      dmy: "%d-%m-%Y"

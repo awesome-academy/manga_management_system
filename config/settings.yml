@@ -3,6 +3,7 @@ users:
 categories:
   page: 5
 mangas:
+  limit: 12
   page: 5
 chapters:
   page: 5

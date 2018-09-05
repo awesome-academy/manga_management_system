@@ -2,11 +2,11 @@ class CategoriesController < ApplicationController
   before_action :get_category, only: [:show]
 
   def index
-    @categories = Category.all
+    @categories = Category.order(:name)
   end
 
   def show
-    @mangas = @category.mangas.all
+    @mangas = @category.mangas.order(:name)
   end
 
   private

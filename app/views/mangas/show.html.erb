@@ -5,7 +5,7 @@
       <article id="item-detail">
         <h1 class="title-detail"><%= @manga.name %></h1>
         <time class="small">
-        <%= t(".last_updated") %> : <%= @manga.updated_at.strftime("%d-%m-%Y") %>
+        <%= t(".last_updated") %> : <%= l(@manga.updated_at, format: :dmy) %>
         </time>
         <div class="detail-info">
           <div class="row">
@@ -19,9 +19,9 @@
                     </i> <%= t(".author") %>
                   </p>
                   <% if @manga.authors.nil? %>
-                  <p class="col-xs-8"><%= t(".updating") %></p>
+                    <p class="col-xs-8"><%= t(".updating") %></p>
                   <% else %>
-                  <p class="col-xs-8"><%= render partial: "author", collection: @authors %></p>
+                    <p class="col-xs-8"><%= render partial: "author", collection: @authors %></p>
                   <% end %>
                 </li>
                 <li class="status row">
@@ -54,9 +54,21 @@
                 <div class="col-sm-6">
                 </div>
               </div>
+              <div class="row">
+                <div class="small-2 large-2 columns">
+                  <%= rating_for @manga, "rate_manga",  disable_after_rate: true %>
+                </div>
+                <br>
+                <div class="small-2 large-4 columns">
+                  <% if current_user %>
+                    <%= t(".vote_now") %>: <%= rating_for @manga, "rate_manga", disable_after_rate: false, half_show: true, enable_half: true, cancel: false  %>
+                    <br>
+                  <% end %>
+                </div>
+              </div>
               <div class="mrt10" itemscope="" itemtype="http://schema.org/AggregateRating">
                 <span itemprop="name"><%= @manga.name %> | </span>
-                <%= t(".rate") %>: <span itemprop="ratingValue"><%= @manga.average_rate %></span>/5<meta itemprop="bestRating" content="5"><meta itemprop="worstRating" content="1">
+                <%= t(".rate") %>: <span itemprop="ratingValue"><%= number_with_precision(@manga.avg_rating_dimension_rate_manga(@manga), precision: 1) %></span><meta itemprop="bestRating" content="5"><meta itemprop="worstRating" content="1">
               </div>
               <div class="follow">
                 <% if user_signed_in? %>

@@ -5,10 +5,19 @@
       <a href="<%= root_path %>"><h1>Mag<span>Anime</span></h1></a>
     </div>
     <div class="w3_search">
-      <form action="#" method="post">
-        <input type="text" name="Search" placeholder="Search" required="">
-        <input type="submit" value="Go">
-      </form>
+      <%= form_tag mangas_path, method: :get,
+        class: "navbar-form search-form" do %>
+        <div class="form-group dropdown">
+          <%= text_field_tag :search, params[:search],
+            class: "form-control dropdown-toggle",
+            placeholder: t(".search"),
+            "data-toggle": "dropdown", "aria-hidden": :true,
+            autocomplete: :off, required: true %>
+        </div>
+        <%= button_tag type: :submit, class: "btn btn-default" do %>
+          <i class="fa fa-search"></i>
+        <% end %>
+      <% end %>
     </div>
     <div class="w3l_sign_in_register">
       <ul>

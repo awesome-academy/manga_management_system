@@ -35,7 +35,7 @@
           <i class="fa fa-info-circle"></i> <em><%= t(".info") %></em>
         </div>
         <div class="chapter-nav">
-          <a class="home" href="<% root_path %>" title="<%= t("home") %>"><i class="fa fa-home"></i></a>
+          <%= link_to "", root_path, class: "fa fa-home" %>
           <%= link_to "", @previous, class: "fa fa-arrow-left" %>
           <select class="select-chapter", onChange="if(this.selectedIndex!=0) self.location=this.options[this.selectedIndex].value">
             <option><%= t(".select_title") %></option>
