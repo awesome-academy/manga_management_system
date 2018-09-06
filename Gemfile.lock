@@ -366,7 +366,10 @@ DEPENDENCIES
   owlcarousel-rails
   puma (~> 3.11)
   rails (~> 5.2.0)
+<<<<<<< HEAD
   ratyrate!
+=======
+>>>>>>> 8e901559de63041e7ed8573b74df8e83b86bd073
   ransack!
   sass-rails (~> 5.0)
   selenium-webdriver
