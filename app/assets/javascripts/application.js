@@ -21,6 +21,8 @@
 //= require easing
 //= require owl.carousel
 //= require magnific-popup
+//= require jquery.raty
+//= require ratyrate
 //= require custom
 //= require ckeditor/init
 //= require activestorage

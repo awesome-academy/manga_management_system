@@ -9,8 +9,8 @@ class User < ApplicationRecord
 
   enum role: {user: 0, admin: 1}
   after_initialize :set_default_role, if: :new_record?
+  ratyrate_rater
 
-  has_many :rates
   has_many :comments
   has_many :likes
   has_many :active_relationships, class_name: Relationship.name,
