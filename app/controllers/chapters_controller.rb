@@ -3,7 +3,7 @@ class ChaptersController < ApplicationController
 
   def show
     @chapters = @chapter.manga.chapters.order("LENGTH(name)").order(:name)
-    @previous = @chapters.previous_chapter(@chapter.id).first
+    @previous = @chapters.previous_chapter(@chapter.id).last
     @next = @chapters.next_chapter(@chapter.id).first
   end
 

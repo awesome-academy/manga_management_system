@@ -72,6 +72,7 @@ en:
   full: "Completed Mangas"
   continue: "Continued Mangas"
   follow: "Followings"
+  manga_noti: "A new manga was created"
   admin:
     categories:
       index:
@@ -129,9 +130,18 @@ en:
     formats:
       dmy: "%d-%m-%Y"
   comments:
+    show:
+      compose: "Create new comment"
+      comment: "Comment"
     comment_form:
       comment: "comment"
   searches:
     index:
       title: "Advance Search"
       category_search: "Search by any of these categories"
+  events:
+    index:
+      notification: "Notifications"
+      num: "No."
+      message: "Detail"
+      time: "Time"

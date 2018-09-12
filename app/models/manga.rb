@@ -22,6 +22,7 @@ class Manga < ApplicationRecord
 
   mount_uploader :thumbnail, ThumbnailUploader
   mount_uploader :poster, ThumbnailUploader
+  after_create_commit {create_manga_noti}
 
   def overall_ratings(manga)
     array = Rate.rateable
@@ -37,5 +38,9 @@ class Manga < ApplicationRecord
     star_count = stars.count
     stars_total = stars.inject(0){|sum,x| sum + x }
     score = stars_total / (star_count.nonzero? || 1)
+  end
+
+  def create_manga_noti
+    Event.create message: I18n.t("manga_noti")
   end
 end
