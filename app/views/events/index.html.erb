@@ -1,0 +1,13 @@
+<table class="table table-striped">
+  <caption><%= t(".notification") %></caption>
+  <thead>
+    <tr>
+      <th><%= t(".num") %></th>
+      <th><%= t(".message") %></th>
+      <th><%= t(".time") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @events %>
+  </tbody>
+</table>

@@ -72,6 +72,7 @@ vi:
   full: "Truyện full"
   continue: "Truyện tiếp diễn"
   follow: "Truyện đang theo dõi"
+  manga_noti: "Một Manga mới được tạo"
   admin:
     categories:
       index:
@@ -130,9 +131,18 @@ vi:
       dmy: "%d-%m-%Y"
       author: "Tác gỉa"
   comments:
+    show:
+      compose: "Tạo comment"
+      comment: "Comment"
     comment_form:
       comment: "comment"
   searches:
     index:
       title: "Tìm kiếm nâng cao"
       category_search: "Tìm kiếm theo bất kỳ thể loại"
+  events:
+    index:
+      notification: "Thông báo"
+      num: "No."
+      message: "Nội dung"
+      time: "Thời điểm"

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'events/index'
   post '/rate' => 'rater#create', :as => 'rate'
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users, only: :omniauth_callbacks, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
@@ -26,6 +27,7 @@ Rails.application.routes.draw do
     resources :authors
     resources :relationships, only: [:create, :destroy]
     resources :searches, only: :index
+    resources :events, only: [:index]
     namespace :admin do
       root "admin#index",as: :root
       resources :categories
@@ -38,6 +40,7 @@ Rails.application.routes.draw do
         end
       end
     end
+    mount ActionCable.server => '/cable'
   end
   match '*.path', to: redirect("/#{I18n.default_locale}/%{path}"), :via => [:get, :post]
   match '', to: redirect("/#{I18n.default_locale}"), :via => [:get, :post]
