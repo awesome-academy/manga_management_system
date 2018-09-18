@@ -1,29 +1,25 @@
-<%= form_for [:admin, @chapter] do |f| %>
+<%= form_for ([:admin, @chapter]), html: {multipart: true} do |f| %>
   <div class="row">
     <div class="col-md-8">
       <div class="block-section">
-        <h3><%= t("manga_name") %></h3>
+        <h3><%= t("chapter_name") %></h3>
         <%= f.text_field :name, class: "form-control",
           placeholder: t("enter_chapter_number") %>
-      </div>
-      <div class="block-section">
-        <h3><%= t("manga_information") %></h3>
-        <%= f.cktext_area :content, class: "form-control" %>
       </div>
     </div>
     <div class="col-md-4">
       <div class="block-section">
-        <h3><%= t("manga_category") %></h3>
+        <h3><%= t("manga") %></h3>
         <ul class="list-cat">
           <%= f.collection_select :manga_id,
             Manga.all, :id, :name %>
         </ul>
       </div>
       <div class="block-section">
-        <h3><%= t("chapter_thumbnail") %></h3>
-        <%= f.file_field :images %>
-        <%= f.hidden_field :images_cache %>
-        <%= image_tag @chapter.images_url, class: "preview" if @chapter.images? %>
+        <%= f.fields_for :pages do |p| %>
+          <%= p.label :image %>
+          <%= p.file_field :image, multipart: true, name: "pages[image][]" %>
+        <% end %>
       </div>
       <div class="block-section">
         <%= f.submit yield(:btn_title), class: "btn btn-default" %>
