@@ -45,8 +45,8 @@
       </div>
     </div>
     <div class="reading-detail box_doc">
-      <% if @chapter.images.present? %>
-        <div><%= image_tag(@chapter.images.url) %></div>
+      <% if @chapter.pages.present? %>
+        <div><%= @chapter.pages %></div>
       <% else %>
         <div><%= @chapter.content %></div>
       <% end %>

@@ -5,16 +5,22 @@ class Admin::ChaptersController < Admin::AdminController
   def index
     @chapters = Chapter.paginate page: params[:page], per_page: Settings.chapters.page
   end
+
   def show
+    @pages = @chapter.pages.all
   end
 
   def new
     @chapter = Chapter.new
+    @page = @chapter.pages.build
   end
 
   def create
     @chapter = Chapter.new chapter_params
     if @chapter.save
+      params[:pages]['image'].each do |i|
+        @page = @chapter.pages.create!(image: i, chapter_id: @chapter.id)
+      end
       flash[:info] = t("chapter_created")
       redirect_to admin_chapters_path
     else
@@ -28,6 +34,9 @@ class Admin::ChaptersController < Admin::AdminController
 
   def update
     if @chapter.update chapter_params
+      params[:pages]['image'].each do |i|
+        @page = @chapter.pages.create!(image: i)
+      end
       flash[:alert] = t("chapter_updated")
       redirect_to admin_chapters_path
     else
@@ -49,7 +58,7 @@ class Admin::ChaptersController < Admin::AdminController
   private
 
   def chapter_params
-    params.require(:chapter).permit(:id, :name, :images, :images_cache, :manga_id, :content)
+    params.require(:chapter).permit(:id, :name, :images, :images_cache, :manga_id, :content, pages_attributes: [:id, :chapter_id, :image])
   end
 
   def find_chapter

@@ -1,5 +1,7 @@
 class Chapter < ApplicationRecord
   belongs_to :manga
+  has_many :pages
+  accepts_nested_attributes_for :pages
   acts_as_votable
 
   mount_uploader :images, ThumbnailUploader
