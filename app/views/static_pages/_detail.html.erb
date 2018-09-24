@@ -2,7 +2,7 @@
   <div class="agile_tv_series_grid">
     <div class="col-md-6 agile_tv_series_grid_left">
       <div class="w3ls_market_video_grid1">
-        <%= image_tag(manga.thumbnail.url, alt: " ",class: "img-responsive resize-image-most-follow" ) if manga.thumbnail.present? %>
+        <%= link_to image_tag(manga.thumbnail.url, alt: " ",class: "img-responsive resize-image-most-follow" ) if manga.thumbnail.present? %>
         <a class="w3_play_icon" href="#small-dialog">
           <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
         </a>
@@ -30,3 +30,7 @@
     </div>
   </div>
 </li>
+<div id="small-dialog" class="mfp-hide">
+  <%#= video_tag manga.anime.name, control: "true" %>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/pfRrZDVYhHI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>

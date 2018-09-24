@@ -5,7 +5,7 @@
       <%= f.hidden_field :manga_id, value: @manga.id, id: "manga_#{parent_id}" %>
       <%= f.hidden_field :user_id, value: current_user.id, id: "user_#{parent_id}" %>
       <p class="emoji-picker-container">
-        <%= f.text_area :content, placeholder: t("mangas.show.compose"),
+        <%= f.text_area :content, placeholder: t("mangas_show_compose"),
         required: true, class: "form-control add-comment", data: { emojiable: true }, id: "content_#{parent_id}" %>
       </p>
       <%= f.submit t("mangas.show.comment"), class: "btn btn-xs btn-custom2" %>

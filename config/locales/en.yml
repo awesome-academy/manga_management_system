@@ -30,7 +30,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  coryright: "2018 Manga Anime. All rights reserved | Design by Killua"
   layouts:
+    coryright: "2018 Manga Anime. All rights reserved"
     header:
       forgot: "Forgot your password?"
       create_account: "Create to Account"
@@ -81,6 +83,12 @@ en:
   all_categories: "All Categories"
   all_mangas: "All Mangas"
   skill_chart: "Skill Chart"
+  chapter_name: "Chapter name"
+  chapter_information: "Chapter Information"
+  enter_chapter_number: "Enter Chapter number"
+  enter_manga_title: "Enter Manga Title"
+  enter_manga_country: "Enter Country"
+  mangas_show_compose: "Enter comment here"
   admin:
     categories:
       index:
